@@ -8,7 +8,7 @@ namespace autenticacaoefcookie.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int IdUsuario { get; set; }
         
         [StringLength(100,MinimumLength=4)] 
         [Required]       
