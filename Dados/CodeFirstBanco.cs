@@ -1,3 +1,4 @@
+using System.Linq;
 using autenticacaoefcookie.Models;
 
 namespace autenticacaoefcookie.Dados
@@ -6,6 +7,9 @@ namespace autenticacaoefcookie.Dados
     {
         public static void Inicializar(AutenticacaoContext contexto){
             contexto.Database.EnsureCreated();
+
+           //acrescentei essa linha que não tinha no notepad
+            if(contexto.Usuarios.Any()) return;
 
             //popular os dados
             var usuario = new Usuario(){
